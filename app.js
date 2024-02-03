@@ -18,7 +18,7 @@ client.once(Events.ClientReady, (c) => {
     const quotesChannel = client.channels.cache.get(process.env.QUOTES_CHANNEL_ID);
 
     // Quote of the Day Job (9:30 AM)
-    schedule.scheduleJob('30 9 * * *', function () {
+    schedule.scheduleJob('* * * * *', function () {
         try {
             axios.get("https://zenquotes.io/api/today")
                 .then((quote) => {
