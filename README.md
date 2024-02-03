@@ -1,4 +1,4 @@
-# 🤖 Discord Quote Bot
+# 🤖 Discord Quotes Bot
 
 ## Description 
 This Discord bot allows users to retrieve quotes within a Discord server. 
