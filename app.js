@@ -22,28 +22,6 @@ app.get("/", (_, res) => {
     res.send('🤖 Discord Quotes Bot is running...');
 });
 
-// app.get("/quote-of-the-day", (_, res) => {
-//     const quotesChannel = client.channels.cache.get(process.env.QUOTES_CHANNEL_ID);
-//     axios.get("https://zenquotes.io/api/today")
-//         .then((res) => {
-//             quotesChannel.send(formatQuote(res))
-//                 .then(() => {
-//                     console.log('✅ - Success! Message sent to quotes channel!');
-//                     res.status(200).send('✅ - Success! Message sent to quotes channel!');
-//                 })
-//                 .catch((sendErr) => {
-//                     console.error('\n❌ - Error! Failed to send message to quotes channel.\n');
-//                     console.error(sendErr);
-//                     res.status(500).send('❌ - Error! Failed to send message to quotes channel.\n' + sendErr);
-//                 });
-//         })
-//         .catch((err) => {
-//             console.error('\n❌ - Error! Failed to fetch quote of the day (https://zenquotes.io/api/today).\n');
-//             console.error(err);
-//             res.status(500).send('❌ - Error! Failed to fetch quote of the day (https://zenquotes.io/api/today).\n' + err);
-//         });
-// });
-
 app.get("/quote-of-the-day", async (_, res) => {
     const quotesChannel = client.channels.cache.get(process.env.QUOTES_CHANNEL_ID);
     let quote = null;
