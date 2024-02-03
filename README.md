@@ -8,7 +8,7 @@ This Discord bot allows users to retrieve quotes within a Discord server.
 - **Random Quote**: The bot can retrieve a random quote from the database.
 
 ## Usage
-1. Invite the bot to your Discord server.
+1. [Invite the bot to your Discord server](https://discord.com/api/oauth2/authorize?client_id=1203143696590307428&permissions=2147485696&scope=bot).
 
 ## Installation
 To host your own instance of the bot, follow these steps:
