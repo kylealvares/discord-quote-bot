@@ -16,13 +16,15 @@ To host your own instance of the bot, follow these steps:
 $ git clone https://github.com/kylealvares/discord-quote-bot.git
 $ cd discord-quote-bot
 $ npm install
-$ # Add your bot token to the .env file
+$ # Create the .env file
+$ # Add DISCORD_TOKEN to the .env file
+$ # Add QUOTES_CHANNEL_ID to the .env file
 $ node app.js
 ```
 
 ## Deployment
 
-The app is currently deployed on [Cyclic.sh](https://www.cyclic.sh/), with the following details:
+The app is currently deployed on [cyclic.sh](https://www.cyclic.sh/), with the following details:
 
 - **Deployment URL**: [bewildered-ray-hem.cyclic.app](https://bewildered-ray-hem.cyclic.app)
 - **Quote of the Day Route**: [bewildered-ray-hem.cyclic.app/quote-of-the-day](https://bewildered-ray-hem.cyclic.app/quote-of-the-day)
