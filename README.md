@@ -22,7 +22,15 @@ $ node app.js
 
 ## Deployment
 
-Currently the app is deployed on <https://www.cyclic.sh/>.
+The app is currently deployed on [Cyclic.sh](https://www.cyclic.sh/), with the following details:
 
-- **Deployment URL**: <https://bewildered-ray-hem.cyclic.app>
-- **Quote of the Day Route**: <https://bewildered-ray-hem.cyclic.app/quote-of-the-day>
+- **Deployment URL**: [bewildered-ray-hem.cyclic.app](https://bewildered-ray-hem.cyclic.app)
+- **Quote of the Day Route**: [bewildered-ray-hem.cyclic.app/quote-of-the-day](https://bewildered-ray-hem.cyclic.app/quote-of-the-day)
+
+### Cron Jobs
+
+The app has the following cron jobs set up:
+| Task              | Schedule   | Route               |
+| ----------------- | ---------- | ------------------- |
+| Spin up the app   | `58 9 * * *`| `/`                |
+| Send a quote      | `0 10 * * *`| `/quote-of-the-day`|
