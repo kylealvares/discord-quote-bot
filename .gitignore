@@ -1,6 +1,12 @@
-# DIRECTORIES
+# Dependency directories
 /node_modules
 
-# FILES
+# Environment file
 .env
+
+# Discord bot specific files
+.DS_Store
+.botconfig
+
+# Package lock
 package-lock.json
