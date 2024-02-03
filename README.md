@@ -19,3 +19,10 @@ $ npm install
 $ # Add your bot token to the .env file
 $ node app.js
 ```
+
+## Deployment
+
+Currently the app is deployed on <https://www.cyclic.sh/>.
+
+- **Deployment URL**: <https://bewildered-ray-hem.cyclic.app>
+- **Quote of the Day Route**: <https://bewildered-ray-hem.cyclic.app/quote-of-the-day>
