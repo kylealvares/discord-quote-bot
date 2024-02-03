@@ -35,11 +35,12 @@ app.get("/quote-of-the-day", (_, res) => {
                 console.error('\n❌ - Error! Failed to fetch quote of the day (https://zenquotes.io/api/today).\n');
                 console.error(err);
                 console.error();
+                res.status(500).send('❌ - Error! Failed to fetch quote of the day (https://zenquotes.io/api/today).\n', err);
             });
     } catch (err) {
         console.error('\n❌ - Error! Failed to send message to quotes channel.');
         console.error(err);
-        console.error();
+        res.send('\n❌ - Error! Failed to send message to quotes channel.', err);
     }
 });
 
