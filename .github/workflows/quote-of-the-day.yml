@@ -1,0 +1,32 @@
+name: Quote of the Day
+
+on:
+  schedule:
+    # Runs at 15:00 UTC every day (10:00 AM EST)
+    - cron: "0 15 * * *"
+
+  # Allows you to manually trigger the workflow from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  quote-of-the-day:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run the bot
+      env:
+        DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+        # QUOTES_CHANNEL_ID: ${{ secrets.QUOTES_CHANNEL_ID }}
+        QUOTES_CHANNEL_ID: ${{ secrets.DEV_CHANNEL_ID }}
+      run: node -e 'require("./app").get("/quote-of-the-day", () => {})'
