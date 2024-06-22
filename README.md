@@ -28,6 +28,8 @@ The app is currently deployed using a **[Github Actions Workflow](.github/workfl
 
 ### Cron Jobs
 
+> **⚠️  Note:** There are other reasons why a schedule might not trigger, **the schedule event can be delayed during periods of high loads of GitHub Actions** workflow runs. 
+
 The app is set to run at 12:51 UTC every day (7:51 AM EST).
 
 ```yml
@@ -36,5 +38,3 @@ on:
     # Runs at 12:51 UTC every day (7:51 AM EST)
     - cron: "51 12 * * *"
 ```
-
-> **⚠️ Note:** There are other reasons why a schedule might not trigger, **the schedule event can be delayed during periods of high loads of GitHub Actions** workflow runs. 
