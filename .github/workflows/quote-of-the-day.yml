@@ -3,7 +3,7 @@ name: Quote of the Day
 on:
   schedule:
     # Runs at 15:00 UTC every day (10:00 AM EST)
-    - cron: "*/10 * * * *"
+    - cron: "0 15 * * *"
 
   # Allows you to manually trigger the workflow from the Actions tab
   workflow_dispatch:
@@ -27,5 +27,5 @@ jobs:
     - name: Run the bot
       env:
         DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-        DEV_CHANNEL_ID: ${{ secrets.DEV_CHANNEL_ID }}
+        QUOTES_CHANNEL_ID: ${{ secrets.QUOTES_CHANNEL_ID }}
       run: npm run start
