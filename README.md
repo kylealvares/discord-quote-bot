@@ -4,7 +4,7 @@
 This Discord bot allows users to retrieve quotes within a Discord server. 
 
 ## Features
-- [x] **Quote of the Day**: A quote of the day is sent to the `#💬-quotes` channel in a discord server everyday at **10:00 A.M. EST**.
+- [x] **Quote of the Day**: A quote of the day **job** is sent to the `#💬-quotes` channel in a discord server everyday at **7:51 A.M. EST**.
 - [ ] **Random Quote**: The bot can retrieve a random quote from the database.
 
 ## Usage
@@ -28,11 +28,13 @@ The app is currently deployed using a **[Github Actions Workflow](.github/workfl
 
 ### Cron Jobs
 
-The app is set to run at 15:00 UTC every day (10:00 AM EST)
+The app is set to run at 12:51 UTC every day (7:51 AM EST).
 
 ```yml
 on:
   schedule:
-    # Runs at 15:00 UTC every day (10:00 AM EST)
-    - cron: "0 15 * * *"
+    # Runs at 12:51 UTC every day (7:51 AM EST)
+    - cron: "51 12 * * *"
 ```
+
+> **⚠️ Note:** There are other reasons why a schedule might not trigger, **the schedule event can be delayed during periods of high loads of GitHub Actions** workflow runs. 
