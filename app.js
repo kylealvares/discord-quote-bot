@@ -12,6 +12,14 @@ async function invokeQuoteOfTheDay() {
     ],
   });
 
+  try {
+    await client.login(process.env.DISCORD_TOKEN);
+    console.log('✅ Bot logged in');
+  } catch (err) {
+    console.error('\n❌ Error! Failed to login to Discord.\n', err);
+    process.exit(1);
+  }
+
   client.once(Events.ClientReady, async () => {
     console.log('✅ Bot is ready');
     const quotesChannel = client.channels.cache.get(process.env.DEV_CHANNEL_ID);
@@ -49,14 +57,6 @@ async function invokeQuoteOfTheDay() {
       process.exit(1);
     }
   });
-
-  try {
-    await client.login(process.env.DISCORD_TOKEN);
-    console.log('✅ Bot logged in');
-  } catch (err) {
-    console.error('\n❌ Error! Failed to login to Discord.\n', err);
-    process.exit(1);
-  }
 }
 
 invokeQuoteOfTheDay();
