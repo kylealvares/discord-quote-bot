@@ -24,15 +24,15 @@ $ node app.js
 
 ## Deployment
 
-The app is currently deployed on [cyclic.sh](https://www.cyclic.sh/), with the following details:
-
-- **Deployment URL**: [bewildered-ray-hem.cyclic.app](https://bewildered-ray-hem.cyclic.app)
-- **Quote of the Day Route**: [bewildered-ray-hem.cyclic.app/quote-of-the-day](https://bewildered-ray-hem.cyclic.app/quote-of-the-day)
+The app is currently deployed using a **[Github Actions Workflow](.github/workflows/quote-of-the-day.yml)**
 
 ### Cron Jobs
 
-The app has the following cron jobs set up:
-| Task              | Schedule   | Route               |
-| ----------------- | ---------- | ------------------- |
-| Spin up the app   | `58 9 * * *`| `/`                |
-| Send a quote      | `0 10 * * *`| `/quote-of-the-day`|
+The app is set to run at 15:00 UTC every day (10:00 AM EST)
+
+```yml
+on:
+  schedule:
+    # Runs at 15:00 UTC every day (10:00 AM EST)
+    - cron: "0 15 * * *"
+```
