@@ -28,4 +28,4 @@ jobs:
       env:
         DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
         QUOTES_CHANNEL_ID: ${{ secrets.DEV_CHANNEL_ID }}
-      run: node -e 'require("./app").get("/quote-of-the-day", () => {})'
+      run: npm run start
