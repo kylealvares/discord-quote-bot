@@ -2,7 +2,7 @@ name: Quote of the Day
 
 on:
   schedule:
-    # Runs at 15:00 UTC every day (10:00 AM EST)
+    # Runs at 12:51 UTC every day (7:51 AM EST)
     - cron: "51 12 * * *"
 
   # Allows you to manually trigger the workflow from the Actions tab
