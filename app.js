@@ -22,7 +22,7 @@ async function invokeQuoteOfTheDay() {
 
   client.once(Events.ClientReady, async () => {
     console.log('✅ Bot is ready');
-    const quotesChannel = client.channels.cache.get(process.env.DEV_CHANNEL_ID);
+    const quotesChannel = client.channels.cache.get(process.env.QUOTES_CHANNEL_ID);
     if (!quotesChannel) {
       console.error('\n❌ Error! Failed to find quotes channel.');
       await client.destroy();
