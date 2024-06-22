@@ -27,5 +27,5 @@ jobs:
     - name: Run the bot
       env:
         DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-        QUOTES_CHANNEL_ID: ${{ secrets.DEV_CHANNEL_ID }}
+        DEV_CHANNEL_ID: ${{ secrets.DEV_CHANNEL_ID }}
       run: npm run start
